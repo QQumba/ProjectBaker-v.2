@@ -10,5 +10,9 @@ namespace ProjectBaker.Domain.Repositories
 		void AddProject(Project project);
 		Project GetProjectById(int id);
 		List<Project> GetAllProjects();
+		List<Project> GetUserProjects(string userEmail);
+		List<Project> PageProjects(int skip, int take);
+		void UpdateProject(Project project);
+		void DeleteProject(Project project);
 	}
 }

@@ -36,5 +36,25 @@ namespace ProjectBaker.DAL.Repositories
 			projects = _db.Projects.Select(p => p).ToList();
 			return projects;
 		}
+
+		public List<Project> GetUserProjects(string userEmail)
+		{
+			throw new NotImplementedException();
+		}
+
+		public List<Project> PageProjects(int skip, int take)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void UpdateProject(Project project)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void DeleteProject(Project project)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

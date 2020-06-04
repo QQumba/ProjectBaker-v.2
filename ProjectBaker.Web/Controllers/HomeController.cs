@@ -27,7 +27,7 @@ namespace ProjectBaker.Web.Controllers
 		public IActionResult Index()
 		{
 			//_db.Set<Project>().Add(new Project() { Name = "pr1"});
-			_appService.AddProject(new Domain.Entities.Project() { Name = "pr1" });
+			//_appService.AddProject(new Domain.Entities.Project() { Name = "pr1" });
 			var proj = _appService.GetAllProjects();
 			if(proj.Count != 0)
 			{
@@ -46,7 +46,7 @@ namespace ProjectBaker.Web.Controllers
 		{
 			ViewBag.Claims = User.Claims.ToList();
 			//return View();
-			return Content(User.Claims?.FirstOrDefault(u => u.Type == "role").Value);
+			return Content(User.Claims?.FirstOrDefault(u => u.Type == "role").Value ?? "something went wrong");
 		}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
