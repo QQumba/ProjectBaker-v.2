@@ -19,42 +19,42 @@ namespace ProjectBaker.DAL.Repositories
 
 		public void AddComment(Comment comment)
 		{
-			throw new NotImplementedException();
+			_db.Comments.Add(comment);
 		}
 
 		public void DeleteComment(Comment comment)
 		{
-			throw new NotImplementedException();
+			_db.Comments.Remove(comment);
 		}
 
 		public List<Comment> GetAllComments()
 		{
-			throw new NotImplementedException();
+			return _db.Comments.Select(c => c).ToList();
 		}
 
 		public Comment GetCommentById(int id)
 		{
-			throw new NotImplementedException();
+			return _db.Comments.FirstOrDefault(c => c.Id == id);
 		}
 
 		public List<Comment> GetProjectComments(int projectId)
 		{
-			throw new NotImplementedException();
+			return _db.Comments.Select(c => c).Where(c => c.ProjectId == projectId).ToList();
 		}
 
 		public List<Comment> GetUserComments(string userEmail)
 		{
-			throw new NotImplementedException();
+			return _db.Comments.Select(c => c).Where(c => c.User.Email == userEmail).ToList();
 		}
 
 		public List<Comment> PageComments(int skip, int take)
 		{
-			throw new NotImplementedException();
+			return _db.Comments.Skip(skip).Take(take).ToList();
 		}
 
 		public void UpdateComment(Comment comment)
 		{
-			throw new NotImplementedException();
+			_db.Comments.Update(comment);
 		}
 	}
 }

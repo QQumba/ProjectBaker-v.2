@@ -17,44 +17,49 @@ namespace ProjectBaker.DAL.Repositories
 			_db = context;
 		}
 
-		public void AddJob(Job user)
+		private DbSet<Job> Set
 		{
-			throw new NotImplementedException();
+			get { return _db.Jobs; }
+		}
+
+		public void AddJob(Job job)
+		{
+			Set.Add(job);
 		}
 
 		public void DeleteJob(Job job)
 		{
-			throw new NotImplementedException();
+			Set.Remove(job);
 		}
 
 		public List<Job> GetAllJobs()
 		{
-			throw new NotImplementedException();
+			return Set.Select(j => j).ToList();
 		}
 
 		public Job GetJobById(int id)
 		{
-			throw new NotImplementedException();
+			return Set.FirstOrDefault(j => j.Id == id);
 		}
 
-		public List<Job> GetProjectJobs(int porjectId)
+		public List<Job> GetProjectJobs(int projectId)
 		{
-			throw new NotImplementedException();
+			return Set.Select(j => j).Where(j => j.ProjectId == projectId).ToList();
 		}
 
 		public List<Job> GetUserJobs(string userEmail)
 		{
-			throw new NotImplementedException();
+			return Set.Select(j => j).Where(j => j.EmployeeEmail == userEmail).ToList();
 		}
 
 		public List<Job> PageJobs(int skip, int take)
 		{
-			throw new NotImplementedException();
+			return Set.Skip(skip).Take(take).ToList();
 		}
 
 		public void UpdateJob(Job job)
 		{
-			throw new NotImplementedException();
+			Set.Update(job);
 		}
 	}
 }
