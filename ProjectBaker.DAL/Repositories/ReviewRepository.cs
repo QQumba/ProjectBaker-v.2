@@ -17,39 +17,44 @@ namespace ProjectBaker.DAL.Repositories
 			_db = context;
 		}
 
+		protected DbSet<Review> Set
+		{
+			get { return _db.Reviews; }
+		}
+
 		public void AddReview(Review user)
 		{
-			throw new NotImplementedException();
+			Set.Add(user);
 		}
 
 		public void DeleteReview(Review review)
 		{
-			throw new NotImplementedException();
+			Set.Remove(review);
 		}
 
 		public List<Review> GetAllReviews()
 		{
-			throw new NotImplementedException();
+			return Set.Select(r => r).ToList();
 		}
 
 		public Review GetReviewById(int id)
 		{
-			throw new NotImplementedException();
+			return Set.FirstOrDefault(r => r.Id == id);
 		}
 
 		public List<Review> GetUserReviews(string userEmail)
 		{
-			throw new NotImplementedException();
+			return Set.Select(r => r).Where(r => r.UserEmail == userEmail).ToList();
 		}
 
 		public List<Review> PageReviews(int skip, int take)
 		{
-			throw new NotImplementedException();
+			return Set.Skip(skip).Take(take).ToList();
 		}
 
 		public void UpdateReview(Review review)
 		{
-			throw new NotImplementedException();
+			Set.Update(review);
 		}
 	}
 }

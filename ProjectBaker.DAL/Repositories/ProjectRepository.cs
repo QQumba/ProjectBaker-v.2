@@ -17,44 +17,45 @@ namespace ProjectBaker.DAL.Repositories
 			_db = context;
 		}
 
+		private DbSet<Project> Set
+		{
+			get { return _db.Projects; }
+		}
+
 		public void AddProject(Project project)
 		{
-			_db.Projects.Add(project);
+			Set.Add(project);
 			_db.SaveChanges();
 		}
 
 		public Project GetProjectById(int id)
 		{
-			Project project = null;
-			project = _db.Projects.First(p => p.Id == id);
-			return project;
+			return Set.First(p => p.Id == id);
 		}
 
 		public List<Project> GetAllProjects()
 		{
-			List<Project> projects = null;
-			projects = _db.Projects.Select(p => p).ToList();
-			return projects;
+			return Set.Select(p => p).ToList();
 		}
 
 		public List<Project> GetUserProjects(string userEmail)
 		{
-			throw new NotImplementedException();
+			return Set.Select(p => p).Where(p => p.UserEmail == userEmail).ToList();
 		}
 
 		public List<Project> PageProjects(int skip, int take)
 		{
-			throw new NotImplementedException();
+			return Set.Skip(skip).Take(take).ToList();
 		}
 
 		public void UpdateProject(Project project)
 		{
-			throw new NotImplementedException();
+			Set.Update(project);
 		}
 
 		public void DeleteProject(Project project)
 		{
-			throw new NotImplementedException();
+			Set.Remove(project);
 		}
 	}
 }

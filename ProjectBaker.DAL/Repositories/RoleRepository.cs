@@ -17,29 +17,34 @@ namespace ProjectBaker.DAL.Repositories
 			_db = context;
 		}
 
-		public void AddRole(Role user)
+		protected DbSet<Role> Set
 		{
-			throw new NotImplementedException();
+			get { return _db.Roles; }
+		}
+
+		public void AddRole(Role role)
+		{
+			Set.Add(role);
 		}
 
 		public void DeleteRole(Role role)
 		{
-			throw new NotImplementedException();
+			Set.Remove(role);
 		}
 
 		public List<Role> GetAllRoles()
 		{
-			throw new NotImplementedException();
+			return Set.Select(r => r).ToList();
 		}
 
 		public Role GetRoleById(int id)
 		{
-			throw new NotImplementedException();
+			return Set.FirstOrDefault(r => r.Id == id);
 		}
 
 		public void UpdateRole(Role role)
 		{
-			throw new NotImplementedException();
+			Set.Update(role);
 		}
 	}
 }

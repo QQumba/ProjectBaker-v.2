@@ -21,6 +21,11 @@ namespace ProjectBaker.DAL.Repositories
 			_db = context;
 		}
 
+		private DbSet<User> Set
+		{
+			get { return _db.Users; }
+		}
+
 		public void AddUser(User user)
 		{
 			_db.Users.Add(user);
@@ -63,23 +68,23 @@ namespace ProjectBaker.DAL.Repositories
 		public async Task<User> ValidateUserAsync(User user)
 		{
 			User validatedUser = null;
-			validatedUser = await _db.Users.FirstOrDefaultAsync(u => u.Email == user.Email && u.Password == user.Password);
+			validatedUser = await Set.FirstOrDefaultAsync(u => u.Email == user.Email && u.Password == user.Password);
 			return validatedUser;
 		}
 
 		public List<User> PageUsers(int skip, int take)
 		{
-			throw new NotImplementedException();
+			return Set.Skip(skip).Take(take).ToList();
 		}
 
 		public void UpdateUser(User user)
 		{
-			throw new NotImplementedException();
+			Set.Update(user);
 		}
 
 		public void DeleteUser(User user)
 		{
-			throw new NotImplementedException();
+			Set.Remove(user);
 		}
 	}
 }
