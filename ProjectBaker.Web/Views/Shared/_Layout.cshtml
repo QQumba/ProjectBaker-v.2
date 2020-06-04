@@ -1,34 +1,314 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ProjectBaker.Web</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="icons/css/fontawesome.css" rel="stylesheet">
+    <link href="icons/css/brands.css" rel="stylesheet">
+    <link href="icons/css/solid.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat:300i,400,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1200">
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ProjectBaker.Web</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+        <div id="header" class="container">
+
+
+            <div class="menu">
+                <div class="logo">ProjectBacker</div>
+                <div class="explore">
+                    <a id="link_explore">
+                        Explore
+                        <i id="caret_down" class="fas fa-caret-down"></i>
+                    </a>
+
+                    <input id="inp" class="search_input" type="text" name="search">
+                    <i id="search" class="fas fa-search"></i>
+
+                </div>
+
+                <div class="second-menu">
+                    <a href="#">What we do</a>
+                    <a href="#">Start a Campaign</a>
+                    <a href="logIn.html">Log In</a>
+                    <a href="singIn.html">Sing In</a>
+                </div>
+
+            </div>
+            <div class="slider">
+
+
+                <div class="two_elements">
+
+                    <div class="sliderr">
+                        <ul id="slides">
+                            <li class="slide showing" id="fstttt"><img src="img/1st_slide.jpg"></li>
+                            <li class="slide" id="sndddd"><img src="img/2nd_slide.jpg"></li>
+                            <li class="slide" id="trdddd"><img src="img/3rd_slide.jpg"></li>
+                            <li class="slide" id="frthhh"><img src="img/4th_slide.jpg"></li>
+                            <li class="slide" id="fvthhh"><img src="img/5th_slide.jpg"></li>
+                        </ul>
+                    </div>
+
+                    <div class="welcome">
+                        <div class="right_items">
+                            <div class="right_text">
+                                <div class="welcome_header rigth_item">Welcome to ProjectBacker</div>
+                                <div class="about_project rigth_item">ProjectBacker is the place where early developers and seekers of innovative projects find new, creative projects.</div>
+                            </div>
+                            <div class="right_buttons">
+                                <div class="sing_up_now but"><p class="but_text">sing up now</p></div>
+                                <div class="learn_more but"><p class="but_text">learn more</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="projects">
+                <div class="projects_content">
+                    <div class="proj_menu">
+                        <div class="proj_head">Popular Projects</div>
+                        <div class="proj_buttons">
+                            <div class="fst_btn" id="fst_btn"><p class="btn_txt"><i id="caret_down_left" class="fas fa-caret-down"></i></p></div>
+                            <div class="snd_btn" id="snd_btn"><p class="btn_txt"><i id="caret_down_right" class="fas fa-caret-down"></i></p></div>
+                        </div>
+                    </div>
+                    <div id="projects_photos" style="display: block;">
+                        <div class="projects_photos">
+                            <div id="pervi" class="fst_proj pervi">
+                                <div class="fst_ph">
+                                    <div class="ph1"><img id="ph1_" src="img/fst.png"></div>
+                                    <div class="ph1_txt">Funding</div>
+                                    <div class="proj_name">ALFRED: The world's first personal A.I.assistant!</div>
+
+                                    <div class="txt_about_proj">The ultimate Artifical Intelligence Robot with built-in Projector, Scanner and 4K Camera!</div>
+                                    <div class="ph1_tag">ROBOTIC</div>
+                                    <div class="financing">
+                                        <div class="usd">$64 340 USD received</div>
+                                        <div class="percent">16%</div>
+                                    </div>
+                                    <div class="gaybar"></div>
+                                    <div class="greenbar"></div>
+                                    <div class="progressbar"></div>
+                                    <div class="days_left"><i class="fas fa-history"></i>178 gays left</div>
+                                </div>
+                            </div>
+                            <div id="vtoroi" class="fst_proj vtoroi">
+                                <div class="fst_ph">
+                                    <div class="ph1"><img id="ph2_" src="img/fst.png"></div>
+                                    <div class="ph1_txt">Funding</div>
+                                    <div class="proj_name">ALFRED: The world's first personal A.I.assistant!</div>
+
+                                    <div class="txt_about_proj">The ultimate Artifical Intelligence Robot with built-in Projector, Scanner and 4K Camera!</div>
+                                    <div class="ph1_tag">ROBOTIC</div>
+                                    <div class="financing">
+                                        <div class="usd">$64 340 USD received</div>
+                                        <div class="percent">16%</div>
+                                    </div>
+                                    <div class="gaybar"></div>
+                                    <div class="greenbar"></div>
+                                    <div class="progressbar"></div>
+                                    <div class="days_left"><i class="fas fa-history"></i>178 gays left</div>
+                                </div>
+                            </div>
+                            <div id="tretii" class="fst_proj tretii">
+                                <div class="fst_ph">
+                                    <div class="ph1"><img id="ph3_" src="img/fst.png"></div>
+                                    <div class="ph1_txt">Funding</div>
+                                    <div class="proj_name">ALFRED: The world's first personal A.I.assistant!</div>
+
+                                    <div class="txt_about_proj">The ultimate Artifical Intelligence Robot with built-in Projector, Scanner and 4K Camera!</div>
+                                    <div class="ph1_tag">ROBOTIC</div>
+                                    <div class="financing">
+                                        <div class="usd">$64 340 USD received</div>
+                                        <div class="percent">16%</div>
+                                    </div>
+                                    <div class="gaybar"></div>
+                                    <div class="greenbar"></div>
+                                    <div class="progressbar"></div>
+                                    <div class="days_left"><i class="fas fa-history"></i>178 gays left</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------------------------------------------------------------------------------->
+                    <!------------------------------------------------------------------------------------------------------->
+                    <div id="projects_photos2" style="display: none;">
+                        <div class="projects_photos">
+                            <div id="chetverti" class="fst_proj pervi">
+                                <div class="fst_ph">
+                                    <div class="ph1"><img id="ph4_" src="img/snd.jpg"></div>
+                                    <div class="ph1_txt">Funding</div>
+                                    <div class="proj_name">ALFRED: The world's first personal A.I.assistant!</div>
+
+                                    <div class="txt_about_proj">The ultimate Artifical Intelligence Robot with built-in Projector, Scanner and 4K Camera!</div>
+                                    <div class="ph1_tag">ROBOTIC</div>
+                                    <div class="financing">
+                                        <div class="usd">$64 340 USD received</div>
+                                        <div class="percent">16%</div>
+                                    </div>
+                                    <div class="gaybar"></div>
+                                    <div class="greenbar"></div>
+                                    <div class="progressbar"></div>
+                                    <div class="days_left"><i class="fas fa-history"></i>178 gays left</div>
+                                </div>
+                            </div>
+                            <div id="pyati" class="fst_proj vtoroi">
+                                <div class="fst_ph">
+                                    <div class="ph1"><img id="ph5_" src="img/snd.jpg"></div>
+                                    <div class="ph1_txt">Funding</div>
+                                    <div class="proj_name">ALFRED: The world's first personal A.I.assistant!</div>
+
+                                    <div class="txt_about_proj">The ultimate Artifical Intelligence Robot with built-in Projector, Scanner and 4K Camera!</div>
+                                    <div class="ph1_tag">ROBOTIC</div>
+                                    <div class="financing">
+                                        <div class="usd">$64 340 USD received</div>
+                                        <div class="percent">16%</div>
+                                    </div>
+                                    <div class="gaybar"></div>
+                                    <div class="greenbar"></div>
+                                    <div class="progressbar"></div>
+                                    <div class="days_left"><i class="fas fa-history"></i>178 gays left</div>
+                                </div>
+                            </div>
+                            <div id="shestoi" class="fst_proj tretii">
+                                <div class="fst_ph">
+                                    <div class="ph1"><img id="ph6_" src="img/snd.jpg"></div>
+                                    <div class="ph1_txt">Funding</div>
+                                    <div class="proj_name">ALFRED: The world's first personal A.I.assistant!</div>
+
+                                    <div class="txt_about_proj">The ultimate Artifical Intelligence Robot with built-in Projector, Scanner and 4K Camera!</div>
+                                    <div class="ph1_tag">ROBOTIC</div>
+                                    <div class="financing">
+                                        <div class="usd">$64 340 USD received</div>
+                                        <div class="percent">16%</div>
+                                    </div>
+                                    <div class="gaybar"></div>
+                                    <div class="greenbar"></div>
+                                    <div class="progressbar"></div>
+                                    <div class="days_left"><i class="fas fa-history"></i>178 gays left</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!------------------------------------------------------------------------------------------------------->
+                    <!------------------------------------------------------------------------------------------------------->
+                    <div id="projects_photos3" style="display: none;">
+                        <div class="projects_photos pervi">
+                            <div id="sedmoi" class="fst_proj">
+                                <div class="fst_ph">
+                                    <div class="ph1"><img id="ph7_" src="img/trd.jpg"></div>
+                                    <div class="ph1_txt">Funding</div>
+                                    <div class="proj_name">ALFRED: The world's first personal A.I.assistant!</div>
+
+                                    <div class="txt_about_proj">The ultimate Artifical Intelligence Robot with built-in Projector, Scanner and 4K Camera!</div>
+                                    <div class="ph1_tag">ROBOTIC</div>
+                                    <div class="financing">
+                                        <div class="usd">$64 340 USD received</div>
+                                        <div class="percent">16%</div>
+                                    </div>
+                                    <div class="gaybar"></div>
+                                    <div class="greenbar"></div>
+                                    <div class="progressbar"></div>
+                                    <div class="days_left"><i class="fas fa-history"></i>178 gays left</div>
+                                </div>
+                            </div>
+                            <div id="vosmoi" class="fst_proj vtoroi">
+                                <div class="fst_ph">
+                                    <div class="ph1"><img id="ph8_" src="img/trd.jpg"></div>
+                                    <div class="ph1_txt">Funding</div>
+                                    <div class="proj_name">ALFRED: The world's first personal A.I.assistant!</div>
+
+                                    <div class="txt_about_proj">The ultimate Artifical Intelligence Robot with built-in Projector, Scanner and 4K Camera!</div>
+                                    <div class="ph1_tag">ROBOTIC</div>
+                                    <div class="financing">
+                                        <div class="usd">$64 340 USD received</div>
+                                        <div class="percent">16%</div>
+                                    </div>
+                                    <div class="gaybar"></div>
+                                    <div class="greenbar"></div>
+                                    <div class="progressbar"></div>
+                                    <div class="days_left"><i class="fas fa-history"></i>178 gays left</div>
+                                </div>
+                            </div>
+                            <div id="devyati" class="fst_proj tretii">
+                                <div class="fst_ph">
+                                    <div class="ph1"><img id="ph9_" src="img/trd.jpg"></div>
+                                    <div class="ph1_txt">Funding</div>
+                                    <div class="proj_name">ALFRED: The world's first personal A.I.assistant!</div>
+
+                                    <div class="txt_about_proj">The ultimate Artifical Intelligence Robot with built-in Projector, Scanner and 4K Camera!</div>
+                                    <div class="ph1_tag">ROBOTIC</div>
+                                    <div class="financing">
+                                        <div class="usd">$64 340 USD received</div>
+                                        <div class="percent">16%</div>
+                                    </div>
+                                    <div class="gaybar"></div>
+                                    <div class="greenbar"></div>
+                                    <div class="progressbar"></div>
+                                    <div class="days_left"><i class="fas fa-history"></i>178 gays left</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="after_proj">Welcome to ProjectBacker</div>
+                    <div class="what_are">What are you crowdfunding for?</div>
+                    <div class="crowdfunding">
+                        <div class="crow_fst">
+                            <div class="hd_crow">Publish Project</div>
+                            <div class="snd_hd">ProjectBacker help bring your project to life</div>
+                            <div class="platform">5% platform free</div>
+                            <div class="lg">ProjectBacker</div>
+                        </div>
+                        <div class="crow_snd">
+                            <div class="hd_crow">Search Team</div>
+                            <div class="snd_hd">ProjectBacker help you find your dream</div>
+                            <div class="platform">0% platform free</div>
+                            <div class="lg">ProjectBacker</div>
+                        </div>
+                    </div>
+                    <div class="two_photos">
+                        <div class="photo1" id="photo1">
+                            <img id="imgg" src="img/ph.jpg">
+                            <div class="photo_txt"><p id="cool">10 Cool and Clever Projects</p></div>
+                            <div class="txt_under_1st_ph">
+                                <p class="our">Our roundup of standout projects</p>
+                                <p class="see_the">SEE THE COLECTION></p>
+                            </div>
+                        </div>
+                        <div class="photo2" id="photo2">
+                            <img id="imggg" src="img/phh.jpg">
+                            <div class="photo_txt2"><p id="ph_txtt1">Team Favorites</p></div>
+                            <div class="txt_under_1st_ph">
+                                <p class="our">Our roundup of standout projects</p>
+                                <p class="see_the">SEE THE COLECTION></p>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="which">Which categories interest you?</div>
+                    <div class="discover">Discover projects just for you and get great recommendations when you select your interests</div>
+                    <div class="sign_up_and"><p>sign up and select interest</p></div>
+
+                    <div class="which">Clever Things For Curious Humans</div>
+                    <div class="discover">There's no better place to start the hunt for something new special. Begin on ProjectBacker to find clever and unconvertional project.</div>
+                    <div class="two_btns">
+                        <div class="sign_up_now"><p>sign up now</p></div>
+                        <div class="learn_more_2"><p>learn more</p></div>
+                    </div>
+
                 </div>
             </div>
-        </nav>
-    </header>
+</header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -37,8 +317,83 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - ProjectBaker.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+         |||||||||||||||||||||||||||||||||||   &copy; 2020 - ProjectBaker.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
+        <div class="footer">
+            <div class="footer_items">
+                <div class="footer_item">
+                    <div class="explore_footer">
+                        <div class="headers_footer">EXPLORE</div>
+                        <div class="footer_txt">
+                            <a href="#">What We Do</a>
+                            <br>
+                            <a href="#">Funding</a>
+                        </div>
+                    </div>
+                    <div class="about_footer">
+                        <div class="headers_footer">ABOUT</div>
+                        <div class="footer_txt">
+                            <a href="#">About us</a>
+                            <br>
+                            <a href="#">Blog</a>
+                            <br>
+                            <a href="#">Trust & Stafery</a>
+                            <br>
+                            <a href="#">Help & Support</a>
+                            <br>
+                            <a href="#">Press</a>
+                            <br>
+                            <a href="#">Contacts</a>
+                        </div>
+                    </div>
+                    <div class="entrepreneurs_footer">
+                        <div class="headers_footer">ENTEPRENEURS</div>
+                        <div class="footer_txt">
+                            <a href="#">How It Works</a>
+                            <br>
+                            <a href="#">Enterprise</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_item">
+                    <div class="mail_footer">
+                        <div><i class="fa fa-envelope"></i></div>
+                        <div class="mail_head">Find out everythingfirst at ProjectBaker</div>
+                        <div class="mail_head2">Discover new and clever products in the ProjectBacker newsletter</div>
+                        <input class="email_input" placeholder="Enter email address">
+                        <br>
+                        <div class="agree">
+                            <div class="input" id="input"></div>
+                            <div class="gal_O4KA" style="display: none;" id="gal_O4KA"><img src="img/gal_O4KA.png"></div>
+                            <div class="argee_with">I agree to the <a href=#>Terms of Use</a> and have read and understand the <a href="#">Privacy Policy</a></div>
+                            <div class="sign_me_up"><p>sign me up</p></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="back">
+            <div class="icons_footer">
+                <div class="icon_item"><i class="fab fa-facebook-f"></i></div>
+                <div class="icon_item"><i class="fab fa-twitter"></i></div>
+                <div class="icon_item"><i class="fab fa-youtube"></i></div>
+                <div class="icon_item"><i class="fab fa-instagram"></i></div>
+                <div class="icon_item"><i class="fab fa-linkedin-in"></i></div>
+            </div>
+        </div>
+        <div class="backkkk">
+            <div class="bottom">
+                <div></div>
+                <div class="bottomm">
+                    <div class="bottom_txt">Privacy Policy</div>
+                    <div class="bottom_txt">Terms of Use</div>
+                    <div class="bottom_txt">Cookie Policy</div>
+                    <div class="bottom_txt">©ProjectBacker team All Rights Reserved</div>
+                </div>
+            </div>
+        </div>
+
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
