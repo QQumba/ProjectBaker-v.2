@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ProjectBaker.DAL.Repositories;
+using ProjectBaker.Domain.Entities;
 using ProjectBaker.Domain.Repositories;
 
 namespace ProjectBaker
@@ -31,6 +32,10 @@ namespace ProjectBaker
 					options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 			services.AddScoped<Services.AppService>();
 			services.AddScoped<IProjectRepository, ProjectRepository>();
+			services.AddScoped<ICommentRepository, CommentRepository>();
+			services.AddScoped<IJobRepository, JobRepository>();
+			services.AddScoped<IReviewRepository, ReviewRepository>();
+			services.AddScoped<IRoleRepository, RoleRepository>();
 			services.AddScoped<IUserRepository, UserRepository>();
 
 			services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

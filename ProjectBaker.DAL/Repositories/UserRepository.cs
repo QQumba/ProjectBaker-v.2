@@ -67,6 +67,19 @@ namespace ProjectBaker.DAL.Repositories
 			return validatedUser;
 		}
 
-		
+		public List<User> PageUsers(int skip, int take)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void UpdateUser(User user)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void DeleteUser(User user)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }
