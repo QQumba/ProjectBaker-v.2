@@ -9,6 +9,7 @@ namespace ProjectBaker.Domain.Entities
 		public int Id { get; set; }
 		public string Name { get; set; }
         public string ProjectPhoto { get; set; }
+        public string ShortDescription { get; set; }
         public string Description { get; set; }
         /// <summary>
         /// Project owner

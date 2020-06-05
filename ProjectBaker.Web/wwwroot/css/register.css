@@ -1,0 +1,38 @@
+main {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+form {
+    display: inline-block;
+    width: 300px;
+    padding: 20px;
+    background-color: lightgray;
+    margin-bottom: -1px;
+}
+
+input {
+    width: 100%;
+    padding: 6px 8px;
+    margin: 4px 0;
+    box-sizing: border-box;
+}
+
+.submit {
+    margin-top: 20px;
+    font-family: 'Courgette', cursive;
+    font-size: 18pt;
+}
+
+form p {
+    font-size: 10pt;
+}
+
+form a {
+    color: #850b85;
+}
+
+    form a:hover {
+        color: #d791d0;
+    }

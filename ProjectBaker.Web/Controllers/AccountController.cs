@@ -78,8 +78,24 @@ namespace ProjectBaker.Web
                 User user = await _appService.GetUserByEmailAsync(model.Email);
                 if (user == null)
                 {
-                    // добавляем пользователя в бд
-                    await _appService.AddUserAsync(new User() { Email = model.Email, Password = model.Password });
+                    user = new User()
+                    {
+                        Email = model.Email,
+                        Password = model.Password,
+                        FirstName = model.FirstName,
+                        LastName = model.LastName,
+                        Country = model.Country,
+                        Age = (uint)model.Age,
+                    };
+                    if (user.IsValid())
+                    {
+                        // добавляем пользователя в бд
+                        await _appService.AddUserAsync(user);
+                    }
+                    else
+                    {
+                        return Content("invalid user"); //change to redirect
+                    }
 
                     await Authenticate(model.Email); // аутентификация
 

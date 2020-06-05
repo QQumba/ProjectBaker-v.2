@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace ProjectBaker.Services
 {
 	public class AppService 
-		: IAppService
-		, IProjectRepository
+		: IProjectRepository
 		, IUserRepository
 		, IJobRepository
 		, ICommentRepository
